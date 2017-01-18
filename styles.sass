@@ -1,0 +1,153 @@
+html
+	height: 100%
+	body
+		margin: 0
+		height: 100%
+		display: flex
+		flex-wrap: wrap
+		nav
+			background-color: #EFEFEF
+			width: 20%
+			height: 100%
+			position: fixed
+			div
+				height: 70%
+				img
+					width: 70%
+					margin: 15% 15% 15% 15%
+				ul
+					list-style: none
+					display: flex
+					align-items: center
+					flex-wrap: wrap
+					padding: 0
+					li
+						width: 70%
+						margin: .5em 15%
+						color: #774D2A
+						font-weight: 900
+			.redes
+				width: 70%
+				height: 30%
+				margin: 0 15%
+				display: flex
+				justify-content: space-between
+				span
+					align-self: center
+					font-size: 28px
+					color: #774D2A
+		header
+			width: 80%
+			margin-left: 20%
+			display: flex
+			flex-direction: row-reverse
+			height: 100%
+			background-image: url("img/cafe-header.jpg")
+			h1
+				-webkit-margin-before: 0
+				-webkit-margin-after: 0
+				font-family: 'Satisfy', cursive
+				font-size: 70px
+				margin-top: 1.2em
+				margin-right: 2.5em
+				display: block
+				color: #EFEFEF
+			h4
+				@extend h1
+				line-height: 30px
+				width: .5em
+				word-wrap: break-word
+				font-family: 'Satisfy', cursive
+				font-size: 35px
+				align-self: flex-end
+				margin: 5% 3%
+				font-weight: 300
+		.tiposCafe
+			width: 80%
+			margin-left: 20%
+			h2
+				font-size: 50px
+				text-align: center
+			.fotosCafe
+				display: flex
+				justify-content: center
+				margin-bottom: 100px
+				.colombiano
+					background-image: url("img/colombiano.jpg")
+					width: 210px
+					height: 210px
+					background-size: cover
+				.etiope
+					@extend .colombiano
+					background-image: url("img/etiope.jpg")
+				.brasileno
+					@extend .colombiano
+					background-image: url("img/brasileno.jpg")
+				.ecuatoriano
+					background-image: url("img/ecuatoriano.jpg")
+					@extend .colombiano
+		.seccionFrappe
+			background-image: url("img/cafetero.jpg")
+			width: 80%
+			margin-left: 20%
+			height: 90%
+			background-size: cover
+			background-attachment: fixed
+			display: flex
+			align-items: flex-end
+			article
+				display: flex
+				background-color: rgba(250, 250, 250, 0.5)
+				.titularLorem
+					width: 25%
+					height: 25%
+					text-align: center
+					align-items: center
+					h4
+						font-size: 18px
+				.textoLorem
+					width: 75%
+					height: 25%
+		.bolsa
+			width: 80%
+			margin-left: 20%
+			height: 80%
+			align-items: center
+			display: flex
+			justify-content: center
+			
+			article
+				width: 80%
+				height: 80%
+				display: flex
+				box-shadow: 2px 2px 10px #999
+				.bolsaImg
+					width: 25%
+					height: 100%
+					background-image: url("img/bolsa.jpg")
+					background-size: cover
+					margin: 0
+					box-shadow: none
+				.bolsaLorem
+					width: 75%
+					height: 100%
+					margin: 0
+					box-shadow: none
+					flex-wrap: wrap
+					justify-content: center
+					h5
+						font-size: 22px
+					p
+						font-size: 18px
+						margin: 20px
+		footer
+			width: 80%
+			margin-left: 20%
+			height: 12%
+			background-color: black
+			display: flex
+			justify-content: space-around
+			align-items: center
+			a
+				text-decoration: none
+				color: white
