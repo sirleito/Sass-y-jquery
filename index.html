@@ -5,6 +5,11 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Elsie|Satisfy" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<script
+		src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		crossorigin="anonymous"></script>
+		<script type="text/javascript" src="index.js"></script>
 	<title></title>
 </head>
 <body>
@@ -31,13 +36,25 @@
 	<section class="tiposCafe">
 		<h2>Todos nuestros cafés</h2>
 		<article class="fotosCafe">
-			<div class="colombiano"></div>
-			<div class="brasileno"></div>
-			<div class="etiope"></div>
-			<div class="ecuatoriano"></div>
+			<div class="lugar colombiano">
+				<p id="pColombiano">Café colombiano</p>
+			</div>
+			<div class="lugar brasileno">
+				<p id="pBrasileno">Café brasileño</p>
+			</div>
+			<div class="lugar etiope">
+				<p id="pEtiope">Café etiope</p>
+			</div>
+			<div class="lugar ecuatoriano">
+				<p id="pEcuatoriano">Café ecuatoriano</p>
+			</div>
 		</article>
 	</section>
 	<section class="seccionFrappe">
+		<div class="contenedorFrappe">
+			<img id="frappe" src="img/frapu.png"></img>			
+		</div>
+
 		<article>
 			<div class="titularLorem">
 				<h4>Titular que habla de</br>Frappes</h4>
@@ -55,6 +72,14 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla ullamcorper condimentum. Praesent arcu lectus, dignissim sit amet gravida at, tincidunt eget velit. Vestibulum quis est justo. Praesent maximus, felis vel vulputate posuere, mi augue faucibus est, at maximus massa neque at felis. Nulla consectetur, dolor vel blandit hendrerit, erat augue tristique ex, in dignissim ex risus eget sapien. Suspendisse id tellus in lectus feugiat fermentum. Praesent nec turpis gravida, porta arcu ut, blandit erat. Vestibulum quis ultricies urna, mollis cursus urna. Sed eget neque a lacus pellentesque volutpat. Etiam at orci est. Duis lacinia pulvinar neque eget fermentum. Curabitur convallis lorem in lectus vulputate vestibulum. Nam aliquet orci vitae finibus efficitur.</p>
 			</article>
 		</article>
+	</section>
+	<section id="carrusel" class="carrusel">
+		<div id="izquierda" class="flechas">
+			<span class="ion-chevron-left"></span>
+		</div>
+		<div id="derecha" class="flechas">
+			<span class="ion-chevron-right"></span>
+		</div>
 	</section>
 	<footer>
 		<a href="#">Responsabilidad social</a>
