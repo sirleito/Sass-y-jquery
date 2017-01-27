@@ -1,10 +1,11 @@
 $(document).ready(function(){
-	var contenedor = $(".contenedorFrappe").position()
+	var contenedor = $(".contenedorFrappe").position().top
 	var frappe = $("#frappe")
-	var posicionFrappe = contenedor.top * 2
+	var posicionFrappe = contenedor * 2
 	frappe.css({
 		'left': posicionFrappe + 'px'
 	})
+
 	$(window).scroll(function(){
 		var barra = $(window).scrollTop();
 		var posicion =  barra * 0.40;
@@ -15,7 +16,16 @@ $(document).ready(function(){
 		frappe.css({
 			'left': frapeFlotante + 'px'
 		})
-		
+		if (frapeFlotante < contenedor) {
+		$(frappe).css({
+			"display": "block"
+			})
+		}else{
+			$(frappe).css({
+			"display": "none"
+			})
+		}
+
 	})
 		var ancho = parseInt($(".lugar").css("width"))
 		var alto = parseInt($(".lugar").css("height"))
