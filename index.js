@@ -1,4 +1,12 @@
 $(document).ready(function(){
+
+	var h4 = $("header h4")
+	h4.hide();
+	if(h4.css("display") !== "none"){
+		h4.fadeIn(2500)	
+	}
+
+
 	var contenedor = $(".contenedorFrappe").position().top
 	var frappe = $("#frappe")
 	var posicionFrappe = contenedor * 2
@@ -11,7 +19,7 @@ $(document).ready(function(){
 		var posicion =  barra * 0.40;
 		var frapeFlotante = posicionFrappe - ( barra * 2 )
 		$('header').css({
-			'background-position': '150px -' + posicion + 'px'
+			'background-position': '0 -' + posicion + 'px'
 		});
 		frappe.css({
 			'left': frapeFlotante + 'px'

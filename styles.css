@@ -16,7 +16,7 @@ html {
         height: 75%; }
         html body nav div img {
           width: 70%;
-          margin: 15% 15% 15% 15%; }
+          margin: 15%; }
         html body nav div ul {
           list-style: none;
           display: flex;
@@ -27,7 +27,8 @@ html {
             width: 70%;
             margin: 0.5em 15%;
             color: #774D2A;
-            font-weight: 900; }
+            font-weight: 900;
+            align-self: center; }
             html body nav div ul li:hover {
               color: #CDAF66;
               cursor: hand;
@@ -49,42 +50,47 @@ html {
     html body header {
       width: 80%;
       margin-left: 20%;
-      display: flex;
-      flex-direction: row-reverse;
       height: 100%;
       background-image: url("img/cafe-header.jpg");
       background-attachment: fixed;
       background-size: cover;
-      background-position: 150px 0; }
+      background-repeat: no-repeat; }
       html body header h1, html body header h4 {
         -webkit-margin-before: 0;
         -webkit-margin-after: 0;
         font-family: "Satisfy", cursive;
         font-size: 70px;
         margin-top: 1.2em;
-        margin-right: 2.5em;
         display: block;
-        color: #EFEFEF; }
+        color: #EFEFEF;
+        width: 100%;
+        text-align: center; }
       html body header h4 {
-        line-height: 30px;
+        line-height: 26px;
         width: 0.5em;
         word-wrap: break-word;
-        font-family: "Satisfy", cursive;
-        font-size: 35px;
-        align-self: flex-end;
-        margin: 5% 3%;
-        font-weight: 300; }
+        font-size: 32px;
+        float: right;
+        margin: 3% 3%;
+        font-weight: 400; }
+      html body header .delAmor {
+        margin-right: 5%; }
     html body .tiposCafe {
       width: 80%;
-      margin-left: 20%; }
+      margin-left: 20%;
+      height: 70%; }
       html body .tiposCafe h2 {
-        font-size: 50px;
-        text-align: center; }
+        font-size: 45px;
+        text-align: center;
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        padding-top: 1.1em;
+        margin: 0; }
       html body .tiposCafe .fotosCafe {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 50px; }
+        height: 70%; }
         html body .tiposCafe .fotosCafe .lugar {
           display: flex;
           align-items: flex-end;
@@ -105,6 +111,8 @@ html {
           background-image: url("img/brasileno.jpg"); }
         html body .tiposCafe .fotosCafe .ecuatoriano {
           background-image: url("img/ecuatoriano.jpg"); }
+    html body .tiposCafe2 {
+      display: none; }
     html body .seccionFrappe {
       background-image: url("img/cafetero.jpg");
       width: 80%;
@@ -199,5 +207,93 @@ html {
       html body footer a {
         text-decoration: none;
         color: white; }
+
+@media only screen and (max-width: 900px) {
+  html body nav div {
+    height: 60%; }
+    html body nav div img {
+      margin: 5%;
+      width: 90%; }
+    html body nav div ul {
+      display: none; }
+  html body nav .redes {
+    flex-direction: column;
+    height: 40%; }
+  html body header {
+    height: 90%; }
+    html body header h4 {
+      display: none; }
+  html body .tiposCafe {
+    display: none; }
+  html body .tiposCafe2 {
+    display: block;
+    width: 80%;
+    margin-left: 20%;
+    height: 70%; }
+    html body .tiposCafe2 article {
+      width: 100%;
+      height: 20%;
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      justify-content: center; }
+      html body .tiposCafe2 article h4 {
+        font-size: 24px;
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        margin: 0 1em;
+        color: white; }
+    html body .tiposCafe2 .nuestros h3 {
+      font-size: 24px; }
+    html body .tiposCafe2 .colombiano2 {
+      background-image: url("img/colombiano2.jpg"); }
+    html body .tiposCafe2 .brasileno2 {
+      background-image: url("img/brasileno2.jpg"); }
+    html body .tiposCafe2 .etiope2 {
+      background-image: url("img/etiope2.jpg"); }
+    html body .tiposCafe2 .ecuatoriano2 {
+      background-image: url("img/ecuatoriano2.jpg"); }
+  html body .seccionFrappe {
+    display: none; }
+  html body .bolsa {
+    width: 100%;
+    margin-left: 20%;
+    height: 80%;
+    align-items: center;
+    display: flex;
+    justify-content: center; }
+    html body .bolsa article {
+      width: 100%;
+      height: 100%; }
+      html body .bolsa article .bolsaImg {
+        display: none; }
+      html body .bolsa article .bolsaLorem {
+        width: 100%;
+        height: 100%;
+        display: block; }
+        html body .bolsa article .bolsaLorem .hablemos {
+          height: 20%;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          html body .bolsa article .bolsaLorem .hablemos h5 {
+            -webkit-margin-before: 0;
+            -webkit-margin-after: 0; }
+        html body .bolsa article .bolsaLorem p {
+          font-size: 18px;
+          margin: 0 10px;
+          height: 80%; }
+        html body .bolsa article .bolsaLorem .none {
+          display: none; }
+  html body .carrusel {
+    display: none; }
+  html body footer {
+    height: 25%;
+    flex-wrap: wrap; }
+  html body a {
+    width: 50%;
+    margin: 0;
+    justify-content: center;
+    display: flex; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -16,7 +16,7 @@ html
 				height: 75%
 				img
 					width: 70%
-					margin: 15% 15% 15% 15%
+					margin: 15%
 				ul
 					list-style: none
 					display: flex
@@ -28,6 +28,7 @@ html
 						margin: .5em 15%
 						color: #774D2A
 						font-weight: 900
+						align-self: center
 						&:hover
 							color: #CDAF66
 							cursor: hand
@@ -49,43 +50,48 @@ html
 		header
 			width: 80%
 			margin-left: 20%
-			display: flex
-			flex-direction: row-reverse
 			height: 100%
 			background-image: url("img/cafe-header.jpg")
 			background-attachment: fixed
 			background-size: cover
-			background-position: 150px 0
+			background-repeat: no-repeat
 			h1
 				-webkit-margin-before: 0
 				-webkit-margin-after: 0
 				font-family: 'Satisfy', cursive
 				font-size: 70px
 				margin-top: 1.2em
-				margin-right: 2.5em
 				display: block
 				color: #EFEFEF
+				width: 100%
+				text-align: center
 			h4
 				@extend h1
-				line-height: 30px
+				line-height: 26px
 				width: .5em
 				word-wrap: break-word
-				font-family: 'Satisfy', cursive
-				font-size: 35px
-				align-self: flex-end
-				margin: 5% 3%
-				font-weight: 300
+				font-size: 32px
+				float: right
+				margin: 3% 3%
+				font-weight: 400
+			.delAmor
+				margin-right: 5%
 		.tiposCafe
 			width: 80%
 			margin-left: 20%
+			height: 70%
 			h2
-				font-size: 50px
+				font-size: 45px
 				text-align: center
+				-webkit-margin-before: 0
+				-webkit-margin-after: 0
+				padding-top: 1.1em
+				margin: 0
 			.fotosCafe
 				display: flex
 				justify-content: center
 				align-items: center
-				margin-bottom: 50px
+				height: 70%
 				.lugar
 					display: flex
 					align-items: flex-end
@@ -109,6 +115,8 @@ html
 				.ecuatoriano
 					background-image: url("img/ecuatoriano.jpg")
 					@extend .colombiano
+		.tiposCafe2
+			display: none
 		.seccionFrappe
 			background-image: url("img/cafetero.jpg")
 			width: 80%
@@ -204,3 +212,95 @@ html
 			a
 				text-decoration: none
 				color: white
+
+@media only screen and ( max-width: 900px)
+	html
+		body
+			nav
+				div
+					height: 60%
+					img
+						margin: 5%
+						width: 90%
+					ul
+						display: none
+				.redes
+					flex-direction: column
+					height: 40%
+			header
+				height: 90%
+				h4
+					display: none
+			.tiposCafe
+				display: none
+			.tiposCafe2
+				display: block
+				width: 80%
+				margin-left: 20%
+				height: 70%
+				article
+					width: 100%
+					height: 20%
+					display: flex
+					align-items: center
+					background-size: cover
+					justify-content: center
+					h4
+						font-size: 24px
+						-webkit-margin-before: 0
+						-webkit-margin-after: 0
+						margin: 0 1em
+						color: white
+				.nuestros
+					h3
+						font-size: 24px
+				.colombiano2
+					background-image: url("img/colombiano2.jpg")
+				.brasileno2
+					background-image: url("img/brasileno2.jpg")
+				.etiope2
+					background-image: url("img/etiope2.jpg")
+				.ecuatoriano2
+					background-image: url("img/ecuatoriano2.jpg")
+			.seccionFrappe
+				display: none
+			.bolsa
+				width: 100%
+				margin-left: 20%
+				height: 80%
+				align-items: center
+				display: flex
+				justify-content: center
+				article
+					width: 100%
+					height: 100%
+					.bolsaImg
+						display: none
+					.bolsaLorem
+						width: 100%
+						height: 100%
+						display: block
+						.hablemos
+							height: 20%
+							display: flex
+							align-items: center
+							justify-content: center
+							h5			
+								-webkit-margin-before: 0
+								-webkit-margin-after: 0
+						p
+							font-size: 18px
+							margin: 0 10px
+							height: 80%
+						.none
+							display: none
+			.carrusel
+				display: none
+			footer
+				height: 25%
+				flex-wrap: wrap
+			a
+				width: 50%
+				margin: 0
+				justify-content: center
+				display: flex
