@@ -8,7 +8,7 @@ html {
     flex-wrap: wrap; }
     html body nav {
       background-color: #EFEFEF;
-      width: 20%;
+      width: 20vw;
       height: 100%;
       position: fixed;
       z-index: 2; }
@@ -48,7 +48,7 @@ html {
             cursor: hand;
             cursor: pointer; }
     html body header {
-      width: 80%;
+      width: 80vw;
       margin-left: 20%;
       height: 100%;
       background-image: url("img/cafe-header.jpg");
@@ -66,17 +66,18 @@ html {
         width: 100%;
         text-align: center; }
       html body header h4 {
-        line-height: 26px;
+        line-height: 0.8em;
         width: 0.5em;
         word-wrap: break-word;
         font-size: 32px;
         float: right;
-        margin: 3% 3%;
-        font-weight: 400; }
+        margin: 3%;
+        font-weight: 400;
+        display: block; }
       html body header .delAmor {
         margin-right: 5%; }
     html body .tiposCafe {
-      width: 80%;
+      width: 80vw;
       margin-left: 20%;
       height: 70%; }
       html body .tiposCafe h2 {
@@ -94,17 +95,17 @@ html {
         html body .tiposCafe .fotosCafe .lugar {
           display: flex;
           align-items: flex-end;
-          justify-content: center; }
+          justify-content: center;
+          width: 210px;
+          height: 210px;
+          background-size: cover; }
           html body .tiposCafe .fotosCafe .lugar p {
             font-family: "Satisfy", cursive;
             display: none;
             font-size: 30px;
             font-weight: 700; }
-        html body .tiposCafe .fotosCafe .colombiano, html body .tiposCafe .fotosCafe .etiope, html body .tiposCafe .fotosCafe .brasileno, html body .tiposCafe .fotosCafe .ecuatoriano {
-          background-image: url("img/colombiano.jpg");
-          width: 210px;
-          height: 210px;
-          background-size: cover; }
+        html body .tiposCafe .fotosCafe .colombiano {
+          background-image: url("img/colombiano.jpg"); }
         html body .tiposCafe .fotosCafe .etiope {
           background-image: url("img/etiope.jpg"); }
         html body .tiposCafe .fotosCafe .brasileno {
@@ -115,7 +116,7 @@ html {
       display: none; }
     html body .seccionFrappe {
       background-image: url("img/cafetero.jpg");
-      width: 80%;
+      width: 80vw;
       margin-left: 20%;
       height: 90%;
       background-size: cover;
@@ -147,7 +148,7 @@ html {
           width: 75%;
           height: 25%; }
     html body .bolsa {
-      width: 80%;
+      width: 80vw;
       margin-left: 20%;
       height: 80%;
       align-items: center;
@@ -178,7 +179,7 @@ html {
             font-size: 18px;
             margin: 20px; }
     html body .carrusel {
-      width: 80%;
+      width: 80vw;
       margin-left: 20%;
       height: 95%;
       display: flex;
@@ -197,7 +198,7 @@ html {
         cursor: hand;
         cursor: pointer; }
     html body footer {
-      width: 80%;
+      width: 80vw;
       margin-left: 20%;
       height: 12%;
       background-color: black;
@@ -208,9 +209,9 @@ html {
         text-decoration: none;
         color: white; }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) and (orientation: portrait) {
   html body nav div {
-    height: 60%; }
+    height: 50%; }
     html body nav div img {
       margin: 5%;
       width: 90%; }
@@ -219,6 +220,65 @@ html {
   html body nav .redes {
     flex-direction: column;
     height: 40%; }
+    html body nav .redes span {
+      font-size: 55px; }
+  html body header {
+    height: 90%; }
+    html body header h1, html body header h4 {
+      font-size: 72px; }
+    html body header h4 {
+      font-size: 50px;
+      margin: 10% 4%; }
+    html body header .delAmor {
+      margin-right: 6%; }
+  html body .tiposCafe h2 {
+    padding-bottom: 1.1em; }
+  html body .tiposCafe .fotosCafe {
+    justify-content: center;
+    flex-wrap: wrap; }
+    html body .tiposCafe .fotosCafe .lugar {
+      margin: 0 auto;
+      width: 300px;
+      height: 300px; }
+    html body .tiposCafe .fotosCafe .ecuatoriano {
+      padding-right: 25px; }
+    html body .tiposCafe .fotosCafe .brasileno {
+      padding-right: 25px; }
+    html body .tiposCafe .fotosCafe .colombiano {
+      padding-left: 25px; }
+    html body .tiposCafe .fotosCafe .etiope {
+      padding-left: 25px; }
+  html body .seccionFrappe {
+    display: none; }
+  html body .bolsa {
+    width: 100%;
+    margin-left: 20%;
+    height: 40%;
+    align-items: center;
+    display: flex;
+    justify-content: center; }
+    html body .bolsa article {
+      width: 100%;
+      height: 100%; }
+      html body .bolsa article .bolsaImg {
+        display: none; }
+      html body .bolsa article .bolsaLorem {
+        width: 100%;
+        height: 100%;
+        display: block; }
+        html body .bolsa article .bolsaLorem .hablemos {
+          height: 20%;
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          html body .bolsa article .bolsaLorem .hablemos h5 {
+            -webkit-margin-before: 0;
+            -webkit-margin-after: 0; }
+        html body .bolsa article .bolsaLorem p {
+          font-size: 24px;
+          margin: 25px;
+          height: initial; } }
+@media only screen and (max-width: 900px) and (orientation: portrait) {
   html body header {
     height: 90%; }
     html body header h4 {
@@ -255,36 +315,6 @@ html {
       background-image: url("img/ecuatoriano2.jpg"); }
   html body .seccionFrappe {
     display: none; }
-  html body .bolsa {
-    width: 100%;
-    margin-left: 20%;
-    height: 80%;
-    align-items: center;
-    display: flex;
-    justify-content: center; }
-    html body .bolsa article {
-      width: 100%;
-      height: 100%; }
-      html body .bolsa article .bolsaImg {
-        display: none; }
-      html body .bolsa article .bolsaLorem {
-        width: 100%;
-        height: 100%;
-        display: block; }
-        html body .bolsa article .bolsaLorem .hablemos {
-          height: 20%;
-          display: flex;
-          align-items: center;
-          justify-content: center; }
-          html body .bolsa article .bolsaLorem .hablemos h5 {
-            -webkit-margin-before: 0;
-            -webkit-margin-after: 0; }
-        html body .bolsa article .bolsaLorem p {
-          font-size: 18px;
-          margin: 0 10px;
-          height: 80%; }
-        html body .bolsa article .bolsaLorem .none {
-          display: none; }
   html body .carrusel {
     display: none; }
   html body footer {

@@ -1,12 +1,12 @@
-$(document).ready(function(){
-
+$(function(){
+		// Fade in del subtitulo */
 	var h4 = $("header h4")
-	h4.hide();
-	if(h4.css("display") !== "none"){
+	if(h4.css("display") == "block"){
+		h4.hide();
 		h4.fadeIn(2500)	
 	}
 
-
+		// Funciones de scroll. Parallax y frappe
 	var contenedor = $(".contenedorFrappe").position().top
 	var frappe = $("#frappe")
 	var posicionFrappe = contenedor * 2
@@ -24,7 +24,7 @@ $(document).ready(function(){
 		frappe.css({
 			'left': frapeFlotante + 'px'
 		})
-		if (frapeFlotante < contenedor) {
+		if (frapeFlotante <= contenedor) {
 		$(frappe).css({
 			"display": "block"
 			})
@@ -35,6 +35,7 @@ $(document).ready(function(){
 		}
 
 	})
+			//Agrandar los cuadrados*/
 		var ancho = parseInt($(".lugar").css("width"))
 		var alto = parseInt($(".lugar").css("height"))
 		var masAncho = ancho * 1.5
@@ -62,6 +63,7 @@ $(document).ready(function(){
                 $(".lugar p").css("display", "none")
             }
         );  
+        //Carrusel*/
  		var contador = 3
  		var izquierda = $("#izquierda")
  		var derecha = $("#derecha")
